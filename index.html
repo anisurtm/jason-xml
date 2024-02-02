@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="op1"></span> <br><br>
+
+
+    <button>go</button>
+    <button onclick="oppp()">back</button>
+
+
+       <!-- //onclick--2--sestem -->
+    <script>
+        document.getElementsByTagName("button")[0].addEventListener("click",hpp);
+        function hpp(){
+            const s = new XMLHttpRequest();
+            s.onload= function(){
+                document.getElementById("op1").innerHTML = this.responseText;
+            };
+            s.open("GET","like.html");
+                s.send();
+
+        }
+        
+        // onclick--2--sestem
+        
+        function oppp(){
+            const s = new XMLHttpRequest();
+            s.onload= function(){
+                document.getElementById("op1").innerHTML = this.responseText;
+            };
+            s.open("GET","hi.html");
+                s.send();
+
+        }
+
+        document.getElementsByTagName("button")[0].addEventListener("click",hppa);
+        function hppa(){
+            let t =new XMLHttpRequest();
+            t.onload= function(){
+                document.getElementById('op1').innerHTML=innerHTML=JSON.parse(this.responseText).a;
+            }
+            t.open("GET",'Anis.json');
+            t.send();
+        }
+
+        
+        
+    </script>
+</body>
+</html>
